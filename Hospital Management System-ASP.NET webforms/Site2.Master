@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="Hospital_Management_System_Ass.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .navbar-fixed-left {
+          width: 140px;
+          position: fixed;
+          border-radius: 0;
+          height: 100%;
+        }
+
+        .navbar-fixed-left .navbar-nav > li {
+          float: none;  /* Cancel default li float: left */
+          width: 139px;
+        }
+
+        .navbar-fixed-left + .container {
+          padding-left: 160px;
+        }
+ 
+        body{
+            background-image:url("img/slider1.jpg");
+            background-repeat:no-repeat;
+            background-size:200%;
+           
+        }
+
+
+ 
+    </style>
+</head>
+<body>
+    <br /><br />
+    <strong><p><h3>WELCOME TO MEDIX ADMIN PORTAL</h3></p></strong>
+    
+    
+    <form id="form1" runat="server">
+         <nav class= "navbar navbar-default">
+           
+                <div class ="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                       </button>
+                      <asp:Label ID="lblAdminName" CssClass ="navbar-brand" runat="server" Text="Label"></asp:Label>
+                </div>
+            
+              <div class="collapse navbar-collapse" id="myNavBar">
+                <ul class="nav navbar-nav">
+                    <li><a href="admin_AddDoc.aspx">Add Doctor</a></li>
+                    <li><a href="admin_addPatient.aspx">Admit Patient</a></li>
+                    <li><a href="admin_AssignDr.aspx">Assign Doctor</a></li>
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                    <li><asp:Button ID="btnLogout" runat="server" CssClass="navbar-brand btn btn-default" Text="Logout" OnClick="btnLogout_Click" /></li>
+                    </ul>
+
+               </div>
+      </nav>
+              
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">    
+            </asp:ContentPlaceHolder>
+       
+
+    </form>
+</body>
+</html>

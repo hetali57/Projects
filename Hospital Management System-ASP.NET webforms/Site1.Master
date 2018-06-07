@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Hospital_Management_System_Ass.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body{
+            background-image:url(img/D.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .back {
+            background: url(img/D.png);
+            background-position: center;
+            height: 750px;
+            width: 100%;
+            padding: 140px 100px;
+            background-repeat: no-repeat;
+            background-size: cover;  
+        } 
+        
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class= "navbar navbar-default">
+           
+                <div class ="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                       </button>
+                    <a class="navbar-brand" href="#">Medix</a>
+                </div>
+            
+              <div class="collapse navbar-collapse" id="myNavBar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">HOSPITAL MANAGEMENT SYSYTEM</a></li>
+                </ul>
+
+               <ul class="nav navbar-nav navbar-right"> 
+                    <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
+                </ul>
+               </div>
+      </nav>
+        <!--<p><h1><center> WELCOME TO MEDIX </center></h1></p>-->
+        <div class="jumbotron back">
+			<div class="text-center" style="margin-top: 140px;">
+				<h1 style="color:#000080; font-family: sans-serif;">WELCOME TO MEDIX</h1>
+				<hr>
+				<p style="color:#000080;">Feel relaxed by visiting our. We are commited to provide you best service, so
+				   you can live feet and healty.</p>
+				
+			</div>
+		</div>	
+           
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        </div>
+    </form>
+</body>
+</html>
+<%--  --%>
