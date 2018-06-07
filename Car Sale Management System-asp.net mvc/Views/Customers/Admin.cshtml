@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="@Url.Content("~/style.css")" rel="stylesheet" />
+
+<div class="container" align="center">
+    <div class="row">
+        <div class="col-md-4 col-lg-offset-4 ">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="navbar-inverse" style="color:white"><h1><i class="fa fa-home fa-fw"></i>Admin</h1></li>
+                <li style="margin-top:5px;font-size:larger;"><i></i>@Html.ActionLink(" Profile", "Details", "Customers", new { id = Session["LoggedCustomerID"] }, htmlAttributes: new { @class = "glyphicon glyphicon-user", @style = "color:black" })</li>
+                <li style="font-size:larger;"><span></span>@Html.ActionLink(" Customer's List", "Index", "Customers", null, new { @class = "glyphicon glyphicon-th", @style = "color:black" })</li>
+                <li style="font-size:larger;"><span class="glyphicons glyphicons-cars"></span>@Html.ActionLink(" Edit Car List", "List", "Cars", null, htmlAttributes: new { @class = "glyphicon glyphicon-copyright-mark", @style = "color:black" })</li>
+                <li style="font-size:larger;"><span class="glyphicons glyphicons-pending-notifications"></span>@Html.ActionLink(" Notifications", "Index", "SellRequests", null, htmlAttributes: new { @class = "glyphicon glyphicon-bell", @style = "color:black" })</li>
+                <li style="font-size:larger;"><span class="glyphicons glyphicons-car-wheel"></span>@Html.ActionLink(" Test Drive Appointments", "Index", "BookTestDrives", null, htmlAttributes: new { @class = "glyphicon glyphicon-road", @style = "color:black" })</li>
+                <li style="font-size:larger;"><i></i>@Html.ActionLink(" Payment History", "Index", "Payments", null, htmlAttributes: new { @class = "glyphicon glyphicon-pencil", @style = "color:black" })</li>
+                <li style="font-size:larger;"><i></i>@Html.ActionLink(" Chat Mail", "Edit", "ChatBoxes", new { id = 1 }, htmlAttributes: new { @class = "glyphicon glyphicon-envelope", @style = "color:black" })</li>
+            </ul>
+        </div>
+    </div>
+</div>

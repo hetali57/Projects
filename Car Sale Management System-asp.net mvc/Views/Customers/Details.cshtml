@@ -1,0 +1,81 @@
+﻿@using System.Web.Mvc.Html
+@model Vintage_World.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link href="@Url.Content("~/style.css")" rel="stylesheet" />
+<script type="text/javascript" src="@Url.Content("~/JavaScript.js")"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 toppad col-md-offset-3 ">
+            <h1>Profile</h1>
+            @if (Session["LoginCustomerName"].ToString() != "Admin")
+            {
+                <h3>@Html.ActionLink("Notifications", "ApprovedSellList", "Cars", new { id = Model.Id }, htmlAttributes: new { @class = "btn-lg btn-default" })</h3>
+            }
+
+            <hr>
+            <p class=" text-info">@DateTime.Now</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2 class="panel-title">@Html.DisplayFor(model => model.Name)</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class=" col-md-12 col-lg-12 ">
+                            <table class="table table-user-information">
+                                <tbody>
+                                    <tr>
+                                        <td><b>@Html.DisplayNameFor(model => model.Email):</b></td>
+                                        <td>@Html.DisplayFor(model => model.Email)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>@Html.DisplayNameFor(model => model.Address):</b></td>
+                                        <td>@Html.DisplayFor(model => model.Address)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>@Html.DisplayNameFor(model => model.City):</b></td>
+                                        <td>@Html.DisplayFor(model => model.City)</td>
+                                    </tr>
+
+                                    <tr>
+                                    <tr>
+                                        <td><b>@Html.DisplayNameFor(model => model.Password):</b></td>
+                                        <td>
+                                            <div class="input-group">
+                                                <input type="password" id="password_input" value="@Html.DisplayFor(model => model.Password,new { @type="password"})" aria-label="Username" aria-describedby="password_visibility">
+                                                <button class="input-group-addon fa fa-eye btn btn-primary btn-lg bg-primary text-white text-center" id="password_visibility" style="width:50px"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, htmlAttributes: new { @class = "btn-lg btn-primary" })
+
+                            @if (Session["LoginCustomerName"].ToString() == "Admin")
+                            {
+                                @Html.ActionLink("Back to Menu", "Admin", "Customers", null, htmlAttributes: new { @class = "btn-lg btn-danger" })
+                            }
+                            else
+                            {
+                                @Html.ActionLink("Back to Home", "Index", "Home", null, htmlAttributes: new { @class = "btn-lg btn-danger" })
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

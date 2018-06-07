@@ -1,0 +1,88 @@
+﻿@model Vintage_World.Models.Customer
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link href="@Url.Content("~/style.css")" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="login-area">
+        <div class="bg-image">
+            <div class="login-signup">
+                <div class="container" style="margin-top:25px">
+                    <div class="login-header">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="login-logo">
+                                    <img src="~/Images/navLogo.png" alt="merkury_logo" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="login-details">
+                                    <ul class="nav nav-tabs navbar-right">
+                                        <li class="active"><a data-toggle="tab" href="#register">Register</a></li>
+                                        <li><a href="http://localhost:16981/Customers/Login">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-content">
+                        <div id="register" class="tab-pane fade in active">
+                            <div class="login-inner">
+                                <div class="title">
+                                    <h1>Register <span>Now!</span></h1>
+                                </div>
+                                <div class="login-form">
+                                    <form>
+                                        <div class="form-details">
+                                            <label class="user">
+                                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @id = "username", @placeholder = "Name", @required = "required" } })
+                                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                            </label>
+                                            <label class="address">
+                                                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @id = "address", @placeholder = "Address", @required = "required" } })
+
+                                            </label>
+                                            <label class="city">
+                                                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @id = "city", @placeholder = "City", @required = "required" } })
+                                                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                                            </label>
+                                            <label class="mail">
+                                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @id = "mail", @placeholder = "Email", @required = "required" } })
+                                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                            </label>
+                                            <label class="pass">
+                                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @id = "password", @placeholder = "Password", @required = "required" } })
+                                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="form-btn">Sent</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+<div>
+    @Html.ActionLink("Back to Login", "Login")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

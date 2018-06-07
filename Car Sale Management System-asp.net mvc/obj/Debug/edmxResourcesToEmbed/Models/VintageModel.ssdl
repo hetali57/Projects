@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VintageDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BookTestDrive">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="BestDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Make" Type="varchar" MaxLength="50" />
+    <Property Name="Model" Type="varchar" MaxLength="50" />
+    <Property Name="Year" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Kms" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EnginLitres" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Transmission" Type="varchar" MaxLength="50" />
+    <Property Name="Fuel_Type" Type="varchar" MaxLength="50" />
+    <Property Name="IsUsed" Type="varchar" MaxLength="50" />
+    <Property Name="Color" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="Image" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ChatBox">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Message" Type="varchar" MaxLength="500" />
+    <Property Name="Reply" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PurchaseDate" Type="date" />
+    <Property Name="PaymentType" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_Name" Type="int" />
+    <Property Name="Car_Model" Type="int" />
+  </EntityType>
+  <EntityType Name="SellRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Make" Type="varchar" MaxLength="50" />
+    <Property Name="Model" Type="varchar" MaxLength="50" />
+    <Property Name="Year" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Kms" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EnginLitres" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Transmission" Type="varchar" MaxLength="50" />
+    <Property Name="Fuel_Type" Type="varchar" MaxLength="50" />
+    <Property Name="IsUsed" Type="varchar" MaxLength="50" />
+    <Property Name="Color" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="Image" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SoldCars">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Name" Type="int" />
+    <Property Name="Car_Detail" Type="int" />
+  </EntityType>
+  <Association Name="FK__Cars__CustomerID__5FB337D6">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="Cars" Type="Self.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payment__Car_Mod__19DFD96B">
+    <End Role="Cars" Type="Self.Cars" Multiplicity="0..1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="Car_Model" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payment__Custome__1AD3FDA4">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="Payment" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Payment">
+        <PropertyRef Name="Customer_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SellReque__Custo__68487DD7">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="SellRequest" Type="Self.SellRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SellRequest">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SoldCars__Car_De__01142BA1">
+    <End Role="Cars" Type="Self.Cars" Multiplicity="0..1" />
+    <End Role="SoldCars" Type="Self.SoldCars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cars">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SoldCars">
+        <PropertyRef Name="Car_Detail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SoldCars__Custom__4F7CD00D">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="SoldCars" Type="Self.SoldCars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SoldCars">
+        <PropertyRef Name="Customer_Name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VintageDBModelStoreContainer">
+    <EntitySet Name="BookTestDrive" EntityType="Self.BookTestDrive" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChatBox" EntityType="Self.ChatBox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SellRequest" EntityType="Self.SellRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SoldCars" EntityType="Self.SoldCars" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Cars__CustomerID__5FB337D6" Association="Self.FK__Cars__CustomerID__5FB337D6">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payment__Car_Mod__19DFD96B" Association="Self.FK__Payment__Car_Mod__19DFD96B">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payment__Custome__1AD3FDA4" Association="Self.FK__Payment__Custome__1AD3FDA4">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Payment" EntitySet="Payment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SellReque__Custo__68487DD7" Association="Self.FK__SellReque__Custo__68487DD7">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="SellRequest" EntitySet="SellRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SoldCars__Car_De__01142BA1" Association="Self.FK__SoldCars__Car_De__01142BA1">
+      <End Role="Cars" EntitySet="Cars" />
+      <End Role="SoldCars" EntitySet="SoldCars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SoldCars__Custom__4F7CD00D" Association="Self.FK__SoldCars__Custom__4F7CD00D">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="SoldCars" EntitySet="SoldCars" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
