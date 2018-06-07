@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Bank</string>
+    <string name="title_activity_navbar">Navbar</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_locator">Map</string>
+    <string name="already_sign_up_login">Already Sign up?Login</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="do_you_agree_with_terms_and_condition">Do you agree with terms and condition?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="enter_card_number">Enter Card Number</string>
+    <string name="card_number">Card Number:</string>
+    <string name="password">Password:</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="last_name">Last Name:</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="first_name">First Name:</string>
+    <string name="view_balance">VIEW BALANCE</string>
+    <string name="transfer">TRANSFER</string>
+    <string name="amount">Amount:</string>
+    <string name="to">TO :</string>
+    <string name="from">FROM :</string>
+    <string name="basic_plan">Basic Plan :</string>
+    <string name="saving_account">Saving Account :</string>
+</resources>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/txtFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:text="@string/first_name" android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/edtFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_first_name"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/txtLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/last_name" android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/edtLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_last_name"
+            android:textSize="18sp"
+            android:inputType="textPersonName" android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/txtCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/card_number" android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/edtSetCardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_card_number"
+            android:textSize="18sp"
+            android:inputType="number" android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/txtSetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/password" android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_password"
+            android:textSize="18sp"
+            android:inputType="textPassword" android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/txtConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/confirm_password" android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/edtConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_password"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:inputType="textPassword"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chkTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/do_you_agree_with_terms_and_condition"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/already_sign_up_login"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp" android:layout_marginStart="10dp" />
+
+
+</LinearLayout>

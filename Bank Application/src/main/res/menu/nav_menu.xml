@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+    <item android:id="@+id/home"
+        android:title="Account Summery"></item>
+
+    <item android:id="@+id/deposit"
+        android:title="Deposit"></item>
+
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/withdraw"
+        android:title="Withdraw"></item>
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/transfer"
+        android:title="Transfer"></item>
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/logout"
+        android:title="Log Out"></item>
+    </group>
+
+
+</menu>

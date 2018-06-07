@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:text="@string/first_name"
+            android:layout_marginStart="20dp" />
+
+        <EditText
+            android:id="@+id/edtFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_first_name"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/last_name"
+            android:layout_marginStart="20dp" />
+
+        <EditText
+            android:id="@+id/edtLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_last_name"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/card_number"
+            android:layout_marginStart="20dp" />
+
+        <EditText
+            android:id="@+id/edtSetCardNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_card_number"
+            android:textSize="18sp"
+            android:inputType="number" android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtSetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/password" android:layout_marginStart="20dp" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/enter_password"
+            android:textSize="18sp"
+            android:inputType="textPassword" android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:text="@string/confirm_password" android:layout_marginStart="20dp" />
+
+        <EditText
+            android:id="@+id/edtConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_password"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:inputType="textPassword"
+            android:layout_marginStart="20dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="335dp"
+        android:layout_marginTop="-100dp"
+        android:text="@string/already_sign_up_login"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="-100dp"
+        android:background="@color/colorAccent"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/chkTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-120dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:text="Do you agree with \nTerms and Conditions?"
+        android:layout_marginStart="325dp" />
+
+
+
+</LinearLayout>
