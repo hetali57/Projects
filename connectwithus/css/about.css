@@ -1,0 +1,51 @@
+.aboutusPage{
+	background: url(../img/about.png);
+	background-position: center;
+    background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+	position:relative;
+}	
+.caption p{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+	padding-left:30px;
+	font-size: 15px;
+	color: white;
+	padding-top: 30px;
+}
+
+
+.footer{
+	font-family: verdana;
+    padding: 1em;
+	background-color:white;
+	position:relative;
+	text-align: center;
+}
+
+.rounded {
+    position: relative;
+
+}
+
+#soc-med {
+    margin-top: 10px;
+}
+
+#soc-med a {
+	 margin: auto;
+}
+
+.pull-left {
+    float: left!important;
+    margin-top: 100px;
+    color: white;
+}
+
+
+

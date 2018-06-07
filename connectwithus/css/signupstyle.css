@@ -1,0 +1,106 @@
+.signuppage{
+	background-image: url(/img/signup.jpg);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+	position:relative;
+}
+#signupform {
+    border: 3px solid transparent;
+	margin-top: 50px;
+	position: relative;
+}	
+/*ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	background-size: cover;
+	font-family: verdana;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	background-size: cover;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.right li a{
+	margin-left: 800px;
+	margin-right: -800px;
+}	
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #666666}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.information{
+	float: right;
+	font-family: verdana;
+	color: white;
+	display: block;
+	padding-right: 200px;
+}	
+.containerinfo{
+	
+}
+input[type=text], input[type=date], input[type=email], input[type=password],select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button.submit {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+p.para{
+	padding-left: 150px;
+	margin-top: -40px;
+}	*/

@@ -1,0 +1,72 @@
+.loginpage{
+	background: url(img/4.jpg) no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+	position:relative;
+}	
+.caption p{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+	padding-left:30px;
+	font-size: 15px;
+	color: white;
+	padding-top: 30px;
+}
+form {
+    border: 3px solid transparent;
+	margin-top: 200px;
+	position: relative;
+}
+
+.footer{
+	font-family: verdana;
+    padding: 1em;
+	background-color:white;
+	position:relative;
+	text-align: center;
+}
+/*.container{
+	background:url(img/4.jpg) no-repeat;
+	height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+}
+
+
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+
+.log-block {
+    padding: 160px 500px 170px 500px;
+	margin: 0 50px 0 0;
+}
+*/
